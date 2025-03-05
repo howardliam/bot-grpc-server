@@ -3,7 +3,7 @@ use std::{env, path::PathBuf};
 fn main() -> Result<(), Box<dyn std::error::Error>> {
     let out_dir = PathBuf::from(env::var("OUT_DIR")?);
 
-    let protos_dir = "../proto";
+    let protos_dir = "proto";
 
     tonic_build::configure()
         .file_descriptor_set_path(out_dir.join("guild_descriptor.bin"))
